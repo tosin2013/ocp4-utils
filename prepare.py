@@ -234,6 +234,7 @@ def main():
                 and "create_iso" in node
                 and not node["create_iso"]
             ):
+                path = tmppath + data["paths"]["network"]
                 CreateNetworkFiles(path, template, env, node)
             elif template == "templateIsolinux" or template == "templateEFI":
                 if (
